@@ -13,9 +13,9 @@ public class ExperimentData
 {
 	@XmlAttribute (name="storedAt") private String storedAt;
 	@XmlAttribute (name="volumeInKB") private int volumeInKB;
-	@XmlElement (name="CSVFile") @XmlElementWrapper(name="InputData") private List<CSVFile> inputData;
-	@XmlElement (name="PNGFile") @XmlElementWrapper(name="ResultData") private List<CSVFile> resultData;
-	@XmlElement (name="TransformationScripts") private List<File> scripts;
+	//@XmlElement (name="CSVFile") @XmlElementWrapper(name="InputData") private List<CSVFile> inputData;
+	//@XmlElement (name="PNGFile") @XmlElementWrapper(name="ResultData") private List<CSVFile> resultData;
+	//@XmlElement (name="TransformationScripts") private List<File> scripts;
 	
 	public String getStoredAt() {
 		return storedAt;
@@ -29,7 +29,7 @@ public class ExperimentData
 	public void setVolumeInKB(int volumeInKB) {
 		this.volumeInKB = volumeInKB;
 	}
-	public List<CSVFile> getInputData() {
+	/*public List<CSVFile> getInputData() {
 		return inputData;
 	}
 	public void setInputData(List<CSVFile> inputData) {
@@ -46,7 +46,7 @@ public class ExperimentData
 	}
 	public void setScripts(List<File> scripts) {
 		this.scripts = scripts;
-	}
+	}*/
 	
 	
 }

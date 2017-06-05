@@ -13,14 +13,15 @@ body {
 table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
-	width: 80%;
+	width: 100%;
+	margin: auto;
 }
 
 #intro {
-font-family: arial, sans-serif;
-font-size: 16px;
-margin: auto;
-width: 65%;
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	margin: auto;
+	width: 65%;
 }
 
 td, th {
@@ -29,30 +30,50 @@ td, th {
 	padding: 8px;
 }
 
-
-
 table.rowHeaderTable tr:nth-child(even) {
 	background-color: #dddddd;
 }
+
+
+.topLevelContainer {
+margin: auto;
+    width: 65%;
+    border: 3px solid #2C3539;
+    padding: 10px;
+}
+
+h3 {
+color: #2C3539;
+
+}
+
 </style>
 </head>
 <body>
-<h1 align="center">Data management plan</h1>
-<div id="intro">
-<p>This experiment has been done within the scope of the lecture "Digital preservation" at the university TU Wien. 
-To re-create the output you will need to take the input data provided at ${storedAt} and to execute the R-script. 
-This will generate you the output that you also see down bellow. Please note that we have put some restrictions to the used data in order to avoid unsupported views.
-The input files may only be csv-files. We use specific information like row and column numbers for this file-format in our schema. The generated output files are always png-files. 
-The transformation is done with an R-script. If you do the processing in another scripting language, please adapt the language in the dmp-document-xml, so that the used language will be displayed.
-You can find this restrictions in the dmp-schema.xsd</p>
-<p>
-If you want to try out other experiments with same input and output formats, feel free, but in this case please adapt the 
-intput, transformation and output data in the dmp-document.xml. Have in mind that this document should provide all the important 
-information in the context of Data management planning for this experiment</p>
-</div>
-	<div id="administrativeData" class="topLevelContainer" align="center">
-		<h3>Administrative Data</h3>
-		<table style="width: 65%"  class="columnHeaderTable">
+	<h1 align="center">Data management plan</h1>
+	<div id="intro">
+		<p>This experiment has been done within the scope of the lecture
+			"Digital preservation" at the university TU Wien. To re-create the
+			output you will need to take the input data provided at <em>${storedAt}</em>
+			and to execute the R-script. This will generate you the output that
+			you also see down bellow. Please note that we have put some
+			restrictions to the used data in order to avoid unsupported views.
+			The input files may only be csv-files. We use specific information
+			like row and column numbers for this file-format in our schema. The
+			generated output files are always png-files. The transformation is
+			done with an R-script. If you do the processing in another scripting
+			language, please adapt the language in the dmp-document-xml, so that
+			the used language will be displayed. You can find this restrictions
+			in the dmp-schema.xsd</p>
+		<p>If you want to try out other experiments with same input and
+			output formats, feel free, but in this case please adapt the intput,
+			transformation and output data in the dmp-document.xml. Have in mind
+			that this document should provide all the important information in
+			the context of Data management planning for this experiment</p>
+	</div>
+	<div id="administrativeData" class="topLevelContainer">
+		<h3 align="center">Administrative Data</h3>
+		<table class="columnHeaderTable">
 			<tr>
 				<th>Experiment version</th>
 				<td>${version}</td>
@@ -73,28 +94,38 @@ information in the context of Data management planning for this experiment</p>
 		</table>
 	</div>
 	<br>
-	<div id="experimentData" class="topLevelContainer" align="center">
-		<h3>Experiment data</h3>
-	</div>
-	<br>
-	<div id="intelectualPropertyRights" class="topLevelContainer"
-		align="center">
-		<h3>Intellectual property rights</h3>
-		<table style="width: 65%" class="rowHeaderTable">
+	<div id="experimentData" class="topLevelContainer">
+		<h3 align="center">Experiment data</h3>
+		<table class="columnHeaderTable">
 			<tr>
-				<th>License</th>
-				<th>Link</th>
+				<th>Location of experiment data</th>
+				<td>${storedAt}</dh>
 			</tr>
 			<tr>
+				<th>Size of experiment data</th>
+				<td>${volumeInKB}</td>
+			</tr>
+
+		</table>
+	</div>
+	<br>
+	<div id="intelectualPropertyRights" class="topLevelContainer">
+		<h3 align="center">Intellectual property rights</h3>
+		<table class="columnHeaderTable">
+			<tr>
+				<th>License</th>
 				<td>${license}</td>
+			</tr>
+			<tr>
+				<th>Link</th>
 				<td>${licenseLink}</td>
 			</tr>
 		</table>
 	</div>
 	<br>
-	<div id="ethics" class="topLevelContainer" align="center">
-		<h3>Ethics</h3>
-		<table style="width: 65%" class="columnHeaderTable">
+	<div id="ethics" class="topLevelContainer">
+		<h3 align="center">Ethics</h3>
+		<table class="columnHeaderTable">
 			<tr>
 				<th>Is personal/critical data included in this experiment?</th>
 				<td>${personalData}</td>
@@ -110,9 +141,9 @@ information in the context of Data management planning for this experiment</p>
 		</table>
 	</div>
 	<br>
-	<div id="backups" class="topLevelContainer" align="center">
-		<h3>Backups</h3>
-		<table style="width: 65%" class="rowHeaderTable">
+	<div id="backups" class="topLevelContainer" >
+		<h3 align="center">Backups</h3>
+		<table class="rowHeaderTable">
 			<tr>
 				<th>Backup number</th>
 				<th>Type of backup</th>

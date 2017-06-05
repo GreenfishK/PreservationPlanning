@@ -2,6 +2,8 @@ package com.preservationPlanning.controller;
 
 import java.io.File;
 import java.net.URISyntaxException;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -31,7 +33,7 @@ public class DMPController
 		 * Normally this will be a value object in form of java bean that will contain the data to be displayed on our view.
 		 * Here we are simply passing a string.
 		 */
-		
+		Format formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		//Administrative data
 		try 
 		{
@@ -39,8 +41,8 @@ public class DMPController
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			DMPModel dmpModel = (DMPModel) jaxbUnmarshaller.unmarshal(new File(getClass().getResource("/../resources/dmp-document.xml").toURI()));
 			
-			String version = "Version: " +  dmpModel.getAdministrativeData().getVersion();
-			String date = "Date: " +  dmpModel.getAdministrativeData().getDate();
+			String version = dmpModel.getAdministrativeData().getVersion();
+			String date =  ""+dmpModel.getAdministrativeData().getDate();
 			String contactPersons = "Contact persons: ";
 			String authors = "Authors: ";
 			String personalData = "";
@@ -49,6 +51,8 @@ public class DMPController
 			String license ="";
 			String licenseLink ="";
 			String backups ="";
+			String storedAt ="";
+			String volumeInKB ="";
 	
 			
 			for(int i = 0; i<dmpModel.getAdministrativeData().getContactPersons().size(); i++)
@@ -73,6 +77,9 @@ public class DMPController
 			+ "<td>" +dmpModel.getBackup().get(i).getNextBackup()+ "</td>" 
 						+"</tr>" ;
 			
+			storedAt = dmpModel.getExperimentData().getStoredAt();
+			volumeInKB = Integer.toString(dmpModel.getExperimentData().getVolumeInKB());
+			
 			model.addAttribute("version", version);
 			model.addAttribute("date", date);
 			model.addAttribute("contactPersons", contactPersons);
@@ -83,6 +90,8 @@ public class DMPController
 			model.addAttribute("license", license);
 			model.addAttribute("licenseLink", licenseLink);
 			model.addAttribute("backups", backups);
+			model.addAttribute("storedAt", storedAt);
+			model.addAttribute("volumeInKB", volumeInKB);
 		} 
 		catch (JAXBException e) 
 		{

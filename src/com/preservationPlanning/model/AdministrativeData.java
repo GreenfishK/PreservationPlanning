@@ -16,7 +16,7 @@ public class AdministrativeData
 	@XmlElement (name="Author") @XmlElementWrapper(name="Authors")  private List<Author> authors;
 	@XmlElement(name="ContactPerson") @XmlElementWrapper(name="ContactPersons") private List<ContactPerson> contactPersons;
 	@XmlAttribute(name="version") private String version;
-	@XmlAttribute(name="Date") private Date date;
+	@XmlAttribute(name="date") private Date date;
 	
 	public List<Author> getAuthors() {
 		return authors;

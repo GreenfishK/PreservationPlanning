@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DataManagementPlan>
-	<AdministrativeData version="1.0" date="2017/06/03">
+	<AdministrativeData version="1.0" date="2017-06-03">
 		<Authors>
 			<Author name="Filip Kovacevic"/>
 			<Author name="Bojan Cavic"/>
@@ -25,7 +25,7 @@
 		</ResultData>
 	</ExperimentData>
 	<IntelectualPropertyRights name ="CC BY" link = "https://creativecommons.org/licenses/by/3.0/" />
-	<Ethics personalData="false" storedUntil ="2017-06-03" encryption ="RSA"/>
+	<Ethics personalData="false" storedUntil="2017-06-08" encryption ="RSA"/>
 	<Backups>
 		<Backup type="localBackup" responsiblePerson ="Filip Kovacevic"/>
 		<Backup type="localBackup" responsiblePerson ="Bojan Cavic"/>

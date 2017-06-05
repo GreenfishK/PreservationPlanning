@@ -9,8 +9,8 @@ public class DMPModel
 {
 	@XmlElement(name="AdministrativeData")
 	private AdministrativeData administrativeData;
-	//@XmlElement(name="ExperimentData")
-	//private List<ExperimentData> experimentData;
+	@XmlElement(name="ExperimentData")
+	private ExperimentData experimentData;
 	@XmlElement(name="IntelectualPropertyRights")
 	private IntelectualPropertyRights intelectualPropertyRights;
 	@XmlElement(name="Ethics")
@@ -26,12 +26,12 @@ public class DMPModel
 		this.administrativeData = administrativeData;
 	}
 	
-	/*public List<ExperimentData> getExperimentData() {
+	public ExperimentData getExperimentData() {
 		return experimentData;
 	}
-	public void setExperimentData(List<ExperimentData> experimentData) {
+	public void setExperimentData(ExperimentData experimentData) {
 		this.experimentData = experimentData;
-	}*/
+	}
 	
 	public IntelectualPropertyRights getIntelectualPropertyRights() {
 		return intelectualPropertyRights;
