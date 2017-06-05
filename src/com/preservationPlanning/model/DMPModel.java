@@ -8,21 +8,21 @@ import javax.xml.bind.annotation.*;
 public class DMPModel 
 {
 	@XmlElement(name="AdministrativeData")
-	private List<AdministrativeData> administrativeData;
+	private AdministrativeData administrativeData;
 	//@XmlElement(name="ExperimentData")
 	//private List<ExperimentData> experimentData;
 	@XmlElement(name="IntelectualPropertyRights")
 	private IntelectualPropertyRights intelectualPropertyRights;
 	@XmlElement(name="Ethics")
-	private List<Ethics> ethics;
+	private Ethics ethics;
 	@XmlElement(name="Backup") 
 	@XmlElementWrapper(name="Backups")
 	private List<Backup> backup;
 	
-	public List<AdministrativeData> getAdministrativeData() {
+	public AdministrativeData getAdministrativeData() {
 		return administrativeData;
 	}
-	public void setAdministrativeData(List<AdministrativeData> administrativeData) {
+	public void setAdministrativeData(AdministrativeData administrativeData) {
 		this.administrativeData = administrativeData;
 	}
 	
@@ -39,10 +39,10 @@ public class DMPModel
 	public void setIntelectualPropertyRights(IntelectualPropertyRights intelectualPropertyRights) {
 		this.intelectualPropertyRights = intelectualPropertyRights;
 	}
-	public List<Ethics> getEthics() {
+	public Ethics getEthics() {
 		return ethics;
 	}
-	public void setEthics(List<Ethics> ethics) {
+	public void setEthics(Ethics ethics) {
 		this.ethics = ethics;
 	}
 	public List<Backup> getBackup() {

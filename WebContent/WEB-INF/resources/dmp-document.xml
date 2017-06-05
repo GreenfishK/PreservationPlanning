@@ -29,6 +29,6 @@
 	<Backups>
 		<Backup type="localBackup" responsiblePerson ="Filip Kovacevic"/>
 		<Backup type="localBackup" responsiblePerson ="Bojan Cavic"/>
-		<Backup type="onlineBackup" responsiblePerson ="Filip Kovacevic" link="https://www.dropbox.com/sh/hxhgmj85lpbh6nl/AACrLQFja8MC_fUiCqaDTHZQa?dl=0" nextBackup="2017-30-03"/>
+		<Backup type="onlineBackup" responsiblePerson ="Filip Kovacevic" link="https://www.dropbox.com/sh/hxhgmj85lpbh6nl/AACrLQFja8MC_fUiCqaDTHZQa?dl=0" nextBackup="2017-30-06"/>
 	</Backups>
 </DataManagementPlan>

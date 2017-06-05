@@ -39,27 +39,51 @@ public class DMPController
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			DMPModel dmpModel = (DMPModel) jaxbUnmarshaller.unmarshal(new File(getClass().getResource("/../resources/dmp-document.xml").toURI()));
 			
-			String version = "Version: " +  dmpModel.getAdministrativeData().get(0).getVersion();
-			String date = "Date: " +  dmpModel.getAdministrativeData().get(0).getDate();
+			String version = "Version: " +  dmpModel.getAdministrativeData().getVersion();
+			String date = "Date: " +  dmpModel.getAdministrativeData().getDate();
 			String contactPersons = "Contact persons: ";
 			String authors = "Authors: ";
-			String backups = "";
+			String personalData = "";
+			String storedUntil = "";
+			String encryption = "";
+			String license ="";
+			String licenseLink ="";
+			String backups ="";
+	
 			
-			for(int i = 0; i<dmpModel.getAdministrativeData().get(0).getContactPersons().size(); i++)
-				contactPersons += dmpModel.getAdministrativeData().get(0).getContactPersons().get(i).getName() + ", ";
+			for(int i = 0; i<dmpModel.getAdministrativeData().getContactPersons().size(); i++)
+				contactPersons += dmpModel.getAdministrativeData().getContactPersons().get(i).getName() + ", ";
 			contactPersons = contactPersons.substring(0, contactPersons.length() - 2);
 			
-			for(int i = 0; i<dmpModel.getAdministrativeData().get(0).getAuthors().size(); i++)
-				authors += dmpModel.getAdministrativeData().get(0).getAuthors().get(i).getName() + ", ";
+			for(int i = 0; i<dmpModel.getAdministrativeData().getAuthors().size(); i++)
+				authors += dmpModel.getAdministrativeData().getAuthors().get(i).getName() + ", ";
 			authors = authors.substring(0, authors.length() - 2);
 			
-			//ethics = ""+ dmpModel.getEthics().get(0).isPersonalData(); //+ ", " + dmpModel.getEthics().get(0).getStoredUntil() + ", " + dmpModel.getEthics().get(0).getEncryption();
+			personalData =  ""+dmpModel.getEthics().isPersonalData();
+			storedUntil =  ""+dmpModel.getEthics().getStoredUntil();
+			encryption = dmpModel.getEthics().getEncryption();
+			
+			license = dmpModel.getIntelectualPropertyRights().getName();
+			licenseLink = dmpModel.getIntelectualPropertyRights().getLink();
+			
+			for(int i = 0; i < dmpModel.getBackup().size(); i++)
+				backups += "<tr>" + "<td>" +Integer.toString(i+1) + "</td>" + "<td>" +dmpModel.getBackup().get(i).getType() + "</td>"  
+			+ "<td>" +dmpModel.getBackup().get(i).getResponsiblePerson() + "</td>" 
+			+ "<td>" +dmpModel.getBackup().get(i).getLink() + "</td>" 
+			+ "<td>" +dmpModel.getBackup().get(i).getNextBackup()+ "</td>" 
+						+"</tr>" ;
 			
 			model.addAttribute("version", version);
 			model.addAttribute("date", date);
 			model.addAttribute("contactPersons", contactPersons);
 			model.addAttribute("authors", authors);
-			//model.addAttribute("ethics", ethics);
+			model.addAttribute("personalData", personalData);
+			model.addAttribute("storedUntil", storedUntil);
+			model.addAttribute("encryption", encryption);
+			model.addAttribute("license", license);
+			model.addAttribute("licenseLink", licenseLink);
+			
+			model.addAttribute("backups", backups);
 		} 
 		catch (JAXBException e) 
 		{
