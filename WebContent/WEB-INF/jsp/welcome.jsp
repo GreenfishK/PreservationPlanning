@@ -34,37 +34,39 @@ table.rowHeaderTable tr:nth-child(even) {
 	background-color: #dddddd;
 }
 
-
 .topLevelContainer {
-margin: auto;
-    width: 65%;
-    border: 3px solid #2C3539;
-    padding: 10px;
+	margin: auto;
+	width: 65%;
+	border: 3px solid #2C3539;
+	padding: 10px;
 }
 
 h3 {
-color: #2C3539;
-
+	color: #2C3539;
 }
-
 </style>
 </head>
 <body>
 	<h1 align="center">Data management plan</h1>
 	<div id="intro">
-		<p>This experiment has been done within the scope of the lecture
+		<p>
+			This experiment has been done within the scope of the lecture
 			"Digital preservation" at the university TU Wien. To re-create the
-			output you will need to take the input data provided <a href="${storedAt}">here</a>
-			and to execute the R-script. This will generate you the output that
-			you also see down bellow. Please note that we have put some
-			restrictions to the used data in order to avoid unsupported views.
-			The input files may only be csv-files. We use specific information
-			like row and column numbers for this file-format in our schema. The
-			generated output files are always png-files. The transformation is
-			done with an R-script. If you do the processing in another scripting
-			language, please adapt the language in the dmp-document-xml, so that
-			the used language will be displayed. You can find this restrictions
-			in the dmp-schema.xsd</p>
+			output you will first of all need to take the input data provided <a
+				href="${storedAt}">here</a>. You will also need a MySQL database
+			running on your local machine as the R-script is executing a create
+			table statement and then inserting data from the input files to those
+			tables. At the end it creates some plots which can be saved as
+			images. The R-script and the outputs can also be found at the same
+			location like above. Please note that we have put some restrictions to the used
+			data in order to avoid unsupported views. The input files may only be
+			csv-files. We use specific information like row and column numbers
+			for this file-format in our schema. The generated output files are
+			always png-files. The transformation is done with an R-script. If you
+			do the processing in another scripting language, please adapt the
+			language in the dmp-document-xml, so that the used language will be
+			displayed. You can find this restrictions in the dmp-schema.xsd
+		</p>
 		<p>If you want to try out other experiments with same input and
 			output formats, feel free, but in this case please adapt the intput,
 			transformation and output data in the dmp-document.xml. Have in mind
@@ -99,7 +101,7 @@ color: #2C3539;
 		<table class="columnHeaderTable">
 			<tr>
 				<th>Location of experiment data</th>
-				<td><a href="${storedAt}">${storedAt}</a></dh>
+				<td><a href="${storedAt}">${storedAt}</a> </dh>
 			</tr>
 			<tr>
 				<th>Size of experiment data</th>
@@ -141,7 +143,7 @@ color: #2C3539;
 		</table>
 	</div>
 	<br>
-	<div id="backups" class="topLevelContainer" >
+	<div id="backups" class="topLevelContainer">
 		<h3 align="center">Backups</h3>
 		<table class="rowHeaderTable">
 			<tr>
