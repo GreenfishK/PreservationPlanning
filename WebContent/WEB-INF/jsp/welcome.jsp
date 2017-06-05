@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"  isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,13 +12,33 @@ body {
 </style>
 </head>
 <body>
-	<div align="center">
-		<br>
-		<h1>${root}</h1>
-		<br>
-	    <h2>${author1}</h2>
-		<h2>${author2}</h2>
-		<br> <br> This is a test site for dmp content.
+	<div id="administrativeData" class="topLevelContainer" align="center">
+	${version}
+	${date}
+	<br>
+		<div id ="authors">
+		${authors}
+		</div>
+		<div id ="contactPersons">
+		${contactPersons}
+		</div>
 	</div>
+	<br>
+	<div id="experimentData" class="topLevelContainer"  align="center">
+	
+	</div>
+	<br>
+	<div id="intelectualPropertyRights" class="topLevelContainer"  align="center">
+	
+	</div>
+	<br>
+	<div id="ethics" class="topLevelContainer"  align="center">
+	<!--  ${ethics}-->
+	</div>
+	<br>
+	<div id="backups" class="topLevelContainer"  align="center">
+	
+	</div>
+	
 </body>
 </html>

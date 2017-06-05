@@ -1,2 +1,6 @@
 D:\Eclipse Workspace (preservation planning)\PreservationPlanning\src\com\preservationPlanning\controller\XMLParser.java
-D:\Eclipse Workspace (preservation planning)\PreservationPlanning\src\com\preservationPlanning\controller\StartUpController.java
+D:\Eclipse Workspace (preservation planning)\PreservationPlanning\src\com\preservationPlanning\controller\DMPController.java
+D:\Eclipse Workspace (preservation planning)\PreservationPlanning\src\com\preservationPlanning\model\Author.java
+D:\Eclipse Workspace (preservation planning)\PreservationPlanning\src\com\preservationPlanning\model\ContactPerson.java
+D:\Eclipse Workspace (preservation planning)\PreservationPlanning\src\com\preservationPlanning\model\DMPModel.java
+D:\Eclipse Workspace (preservation planning)\PreservationPlanning\src\com\preservationPlanning\model\AdministrativeData.java

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataManagementPlan>
+	<AdministrativeData version="1.0" date="2017/06/03">
+		<Authors>
+			<Author name="Filip Kovacevic"/>
+			<Author name="Bojan Cavic"/>
+		</Authors>
+		<ContactPersons>
+			<ContactPerson name="Filip Kovacevic"/>
+			<ContactPerson name="Bojan Cavic"/>
+		</ContactPersons>
+	</AdministrativeData>
+	<ExperimentData storedAt="https://github.com/bojancavic/DigitalPreservationExercise3" volumeInKB="220">
+		<InputData> 
+			<CSVFile name="VIEBevoelkerungSeit1869Wien" rows="645" columns="9" separator=";" /> <!--reference ="path/to/folder"-->
+			<CSVFile name="VIEWirtschaftWienerGemeindebezirke" rows="300" columns="15" separator=";" /> <!--reference ="path/to/folder"-->
+		</InputData>
+		<TransformationScripts language="R">
+			<File name="DP3" sufix="R"/>
+		</TransformationScripts>
+		<ResultData>
+			<PNGFile name="result1"/>  <!--reference ="path/to/folder"-->
+			<PNGFile name="result2" /> <!--reference ="path/to/folder"-->
+			<PNGFile name="result3" /> <!--reference ="path/to/folder"-->
+		</ResultData>
+	</ExperimentData>
+	<IntelectualPropertyRights name ="CC BY" link = "https://creativecommons.org/licenses/by/3.0/" />
+	<Ethics personalData="false" storedUntil ="2017-06-03" encryption ="RSA"/>
+	<Backups>
+		<Backup type="localBackup" responsiblePerson ="Filip Kovacevic"/>
+		<Backup type="localBackup" responsiblePerson ="Bojan Cavic"/>
+		<Backup type="onlineBackup" responsiblePerson ="Filip Kovacevic" link="https://www.dropbox.com/sh/hxhgmj85lpbh6nl/AACrLQFja8MC_fUiCqaDTHZQa?dl=0" nextBackup="2017-30-03"/>
+	</Backups>
+</DataManagementPlan>
