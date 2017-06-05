@@ -10,7 +10,7 @@
 			<ContactPerson name="Bojan Cavic"/>
 		</ContactPersons>
 	</AdministrativeData>
-	<ExperimentData storedAt="https://github.com/bojancavic/DigitalPreservationExercise3" volumeInKB="220">
+	<ExperimentData storedAt="https://github.com/GreenfishK/PreservationPlanning/tree/master/WebContent/WEB-INF/resources" volumeInKB="261">
 		<InputData> 
 			<CSVFile name="VIEBevoelkerungSeit1869Wien" rows="645" columns="9" separator=";" /> <!--reference ="path/to/folder"-->
 			<CSVFile name="VIEWirtschaftWienerGemeindebezirke" rows="300" columns="15" separator=";" /> <!--reference ="path/to/folder"-->
