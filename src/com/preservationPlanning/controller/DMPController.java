@@ -73,7 +73,7 @@ public class DMPController
 			for(int i = 0; i < dmpModel.getBackup().size(); i++)
 				backups += "<tr>" + "<td>" +Integer.toString(i+1) + "</td>" + "<td>" +dmpModel.getBackup().get(i).getType() + "</td>"  
 			+ "<td>" +dmpModel.getBackup().get(i).getResponsiblePerson() + "</td>" 
-			+ "<td>" +dmpModel.getBackup().get(i).getLink() + "</td>" 
+			+ "<td>" + "<a href="+dmpModel.getBackup().get(i).getLink() +">"+dmpModel.getBackup().get(i).getLink()+"</a>" + "</td>" 
 			+ "<td>" +dmpModel.getBackup().get(i).getNextBackup()+ "</td>" 
 						+"</tr>" ;
 			

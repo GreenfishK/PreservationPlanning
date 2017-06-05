@@ -54,7 +54,7 @@ color: #2C3539;
 	<div id="intro">
 		<p>This experiment has been done within the scope of the lecture
 			"Digital preservation" at the university TU Wien. To re-create the
-			output you will need to take the input data provided at <em>${storedAt}</em>
+			output you will need to take the input data provided <a href="${storedAt}">here</a>
 			and to execute the R-script. This will generate you the output that
 			you also see down bellow. Please note that we have put some
 			restrictions to the used data in order to avoid unsupported views.
@@ -99,7 +99,7 @@ color: #2C3539;
 		<table class="columnHeaderTable">
 			<tr>
 				<th>Location of experiment data</th>
-				<td>${storedAt}</dh>
+				<td><a href="${storedAt}">${storedAt}</a></dh>
 			</tr>
 			<tr>
 				<th>Size of experiment data</th>
@@ -118,7 +118,7 @@ color: #2C3539;
 			</tr>
 			<tr>
 				<th>Link</th>
-				<td>${licenseLink}</td>
+				<td><a href="${licenseLink}">${licenseLink}</a></td>
 			</tr>
 		</table>
 	</div>
