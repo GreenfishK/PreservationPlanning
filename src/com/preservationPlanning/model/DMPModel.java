@@ -2,7 +2,6 @@ package com.preservationPlanning.model;
 
 import java.util.List;
 import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="DataManagementPlan")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -10,13 +9,14 @@ public class DMPModel
 {
 	@XmlElement(name="AdministrativeData")
 	private List<AdministrativeData> administrativeData;
-	@XmlElement(name="ExperimentData")
-	private List<ExperimentData> experimentData;
+	//@XmlElement(name="ExperimentData")
+	//private List<ExperimentData> experimentData;
 	@XmlElement(name="IntelectualPropertyRights")
-	private List<IntelectualPropertyRights> intelectualPropertyRights;
+	private IntelectualPropertyRights intelectualPropertyRights;
 	@XmlElement(name="Ethics")
 	private List<Ethics> ethics;
-	@XmlElement(name="Backup")
+	@XmlElement(name="Backup") 
+	@XmlElementWrapper(name="Backups")
 	private List<Backup> backup;
 	
 	public List<AdministrativeData> getAdministrativeData() {
@@ -25,16 +25,18 @@ public class DMPModel
 	public void setAdministrativeData(List<AdministrativeData> administrativeData) {
 		this.administrativeData = administrativeData;
 	}
-	public List<ExperimentData> getExperimentData() {
+	
+	/*public List<ExperimentData> getExperimentData() {
 		return experimentData;
 	}
 	public void setExperimentData(List<ExperimentData> experimentData) {
 		this.experimentData = experimentData;
-	}
-	public List<IntelectualPropertyRights> getIntelectualPropertyRights() {
+	}*/
+	
+	public IntelectualPropertyRights getIntelectualPropertyRights() {
 		return intelectualPropertyRights;
 	}
-	public void setIntelectualPropertyRights(List<IntelectualPropertyRights> intelectualPropertyRights) {
+	public void setIntelectualPropertyRights(IntelectualPropertyRights intelectualPropertyRights) {
 		this.intelectualPropertyRights = intelectualPropertyRights;
 	}
 	public List<Ethics> getEthics() {

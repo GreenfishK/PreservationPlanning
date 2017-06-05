@@ -43,7 +43,7 @@ public class DMPController
 			String date = "Date: " +  dmpModel.getAdministrativeData().get(0).getDate();
 			String contactPersons = "Contact persons: ";
 			String authors = "Authors: ";
-			String ethics = "Ethics: ";
+			String backups = "";
 			
 			for(int i = 0; i<dmpModel.getAdministrativeData().get(0).getContactPersons().size(); i++)
 				contactPersons += dmpModel.getAdministrativeData().get(0).getContactPersons().get(i).getName() + ", ";
