@@ -82,7 +82,6 @@ public class DMPController
 			model.addAttribute("encryption", encryption);
 			model.addAttribute("license", license);
 			model.addAttribute("licenseLink", licenseLink);
-			
 			model.addAttribute("backups", backups);
 		} 
 		catch (JAXBException e) 
